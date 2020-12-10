@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "420624114876",
+    "project_id": "droidhub-20acd",
+    "storage_bucket": "droidhub-20acd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420624114876:android:534317401cc5b9a9bd5cb9",
+        "android_client_info": {
+          "package_name": "com.e.droidhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420624114876-vp245655n2jm48gvtafh6g8pmr31c2ni.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJp6WmTPnlYsHlRutLfV4fSqocKITUSOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420624114876-vp245655n2jm48gvtafh6g8pmr31c2ni.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
