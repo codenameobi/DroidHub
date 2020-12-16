@@ -83,7 +83,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email_layout"
-            app:layout_constraintBottom_toTopOf="@id/sign_up_button"
+            app:layout_constraintBottom_toTopOf="@id/signUpButton"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -97,7 +97,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/sign_up_button"
+            android:id="@+id/signUpButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="200dp"

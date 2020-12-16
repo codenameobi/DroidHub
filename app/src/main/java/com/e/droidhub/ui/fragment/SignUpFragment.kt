@@ -35,7 +35,7 @@ class SignUpFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {5
         super.onViewCreated(view, savedInstanceState)
 
         binding.signUpButton.setOnClickListener {
@@ -44,24 +44,28 @@ class SignUpFragment : Fragment() {
     }
 
     private fun signUpuser () {
-        if(binding.name.toString().isEmpty()){
+        var name = binding.name.text.toString()
+        var email = binding.email.text.toString()
+        var password = binding.password.text.toString().trim()
+
+        if(name.isEmpty()){
             binding.name.error = "Please enter Full Name"
             binding.name.requestFocus()
             return
         }
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(binding.email.toString()).matches()){
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.email.error = "Please enter Valid Email"
-            binding.name.requestFocus()
+            binding.email.requestFocus()
             return
         }
-
-        if(binding.password.toString().isEmpty()){
-            binding.password.error = "Please enter Password"
+        if(password.isEmpty() || password.length < 6){
+            binding.password.error = "6 character password required"
             binding.password.requestFocus()
             return
         }
-        auth.createUserWithEmailAndPassword(binding.email.toString(), binding.password.toString())
+
+        auth.createUserWithEmailAndPassword(email,password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
@@ -74,7 +78,6 @@ class SignUpFragment : Fragment() {
                         Toast.LENGTH_SHORT).show()
                 }
 
-                // ...
             }
     }
 

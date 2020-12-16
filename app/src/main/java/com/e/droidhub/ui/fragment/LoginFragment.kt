@@ -39,15 +39,15 @@ class LoginFragment : Fragment() {
 
     }
 
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        updateUI(currentUser)
-    }
-
-    fun updateUI(currentUser: FirebaseUser?){
-
-    }
+//    public override fun onStart() {
+//        super.onStart()
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        val currentUser = auth.currentUser
+//        updateUI(currentUser)
+//    }
+//
+//    fun updateUI(currentUser: FirebaseUser?){
+//
+//    }
 
 }
