@@ -54,12 +54,13 @@ class SignUpFragment : Fragment() {
             return
         }
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if(email.isEmpty() && !Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.email.error = "Please enter Valid Email"
             binding.email.requestFocus()
             return
         }
-        if(password.isEmpty() || password.length < 6){
+
+        if(password.isEmpty() && password.length < 6){
             binding.password.error = "6 character password required"
             binding.password.requestFocus()
             return
@@ -68,9 +69,19 @@ class SignUpFragment : Fragment() {
         auth.createUserWithEmailAndPassword(email,password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "createUserWithEmail:success")
-                    findNavController().navigate(R.id.loginFragment)
+                    val user = auth.currentUser
+
+                    user!!.sendEmailVerification()
+                            .addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+                                    Log.d(TAG, "Email sent.")
+                                    // Sign in success, update UI with the signed-in user's information
+                                    Log.d(TAG, "createUserWithEmail:success")
+                                    findNavController().navigate(R.id.loginFragment)
+                                }
+                            }
+
+
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
