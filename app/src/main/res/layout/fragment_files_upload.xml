@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.FilesUploadFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Add a file"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/file_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/margin_standard"
+        app:boxBackgroundColor="@color/input_text_box">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="File name goes here"
+            android:textSize="@dimen/input_text_size" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFileChooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:padding="12dp"
+        android:text="Choose File"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:cornerRadius="5dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:src="@drawable/ic_launcher_background" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:padding="12dp"
+        android:text="Upload File"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:cornerRadius="5dp" />
+
+</LinearLayout>
