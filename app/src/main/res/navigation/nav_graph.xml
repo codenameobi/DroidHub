@@ -20,7 +20,7 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_filesFragment"
-            app:destination="@id/filesFragment" />
+            app:destination="@id/filesUploadFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -33,4 +33,9 @@
         android:name="com.e.droidhub.ui.fragment.FilesFragment"
         android:label="fragment_files_screen"
         tools:layout="@layout/fragment_files_screen" />
+    <fragment
+        android:id="@+id/filesUploadFragment"
+        android:name="com.e.droidhub.ui.fragment.FilesUploadFragment"
+        android:label="fragment_files_upload"
+        tools:layout="@layout/fragment_files_upload" />
 </navigation>

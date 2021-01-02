@@ -94,7 +94,7 @@ class LoginFragment : Fragment() {
     private fun updateUI(currentUser: FirebaseUser?){
         if(currentUser != null) {
             if(currentUser.isEmailVerified) {
-                findNavController().navigate(R.id.filesFragment)
+                findNavController().navigate(R.id.filesUploadFragment)
             }else{
                 Toast.makeText(
                         context, "Please verify your email address.",
